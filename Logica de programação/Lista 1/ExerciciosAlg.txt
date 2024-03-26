@@ -1,0 +1,15 @@
+1 - Faça um algoritmo que escreva o seu nome completo, na linha abaixo, sua idade e na linha abaixo sua cidade.
+
+2 - Faça um algoritmo que peça ao usuário dois números e retorne a soma desses dois valores.
+
+3 - Faça um algoritmo que peça ao usuário dois números e retorne a soma, subtração, multiplicação e divisão desses dois valores.
+
+4 - Faça um algoritmo que calcule a área de um quadrado.
+
+5 - Faça um algoritmo que calcule a área de um círculo
+
+6 - Faça um algoritmo que pergunte o ano de nascimento de uma pessoa e exibe a idade aproximada dessa pessoa.
+
+7 - Faça um algoritmo que receba um número inteiro e imprima na tela o seu antecessor e o seu sucessor.
+
+8 - Faça um algoritmo que leia três notas obtidas por um aluno, e imprima na tela a média das notas.
