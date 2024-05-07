@@ -1,0 +1,19 @@
+div {
+    background-color: coral;
+}
+
+.grupo_a {
+    font-size: 25pt;
+    text-align: center;
+}
+
+.grupo_b {
+    font-size: 25pt;
+    text-align: right;
+}
+
+.grupo_c {
+    font-size: 25pt;
+    font-style: italic;
+    font-weight: bold;
+}

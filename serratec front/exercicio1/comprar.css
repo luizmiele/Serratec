@@ -1,0 +1,12 @@
+html, body {
+    background-image: linear-gradient(to bottom, #ffffff, #f1a565);
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-color: #f1a565;
+    height: 75px;
+}

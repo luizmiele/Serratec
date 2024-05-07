@@ -1,0 +1,27 @@
+form div {
+    margin: 5px;
+}
+
+form {
+    width: 50%;
+    background-color: rgb(227, 227, 227);
+    border:3px solid #f00;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #FFFFFF;
+    border: 3px solid black; 
+}
+
+.rodape {
+    text-align: center;
+}
+
+.redonda {
+    margin-top: 10px;
+    background-color: aqua;
+    border: 3px solid black;
+    border-radius: 5px;
+    
+}

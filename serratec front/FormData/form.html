@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataForm</title>
+</head>
+<body>
+    <!-- <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Entre em Contato</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" id="nomeForm">Nome:</label>
+                <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Seu Nome">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" id="emailForm">Email:</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Seu Email">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label" id="mensagemForm">Mensagem:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Digite sua Mensagem" rows="2"></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <button type="enviar" class="btn btn-primary">Enviar</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <form action="" id="form">
+        <input type="text" name="firstName" id="firstName" placeholder="Your First Name">
+        <input type="text" name="lastName" id="lastName" placeholder="Your Last Name">
+        <input type="text" name="email" id="email" placeholder="Your Email">
+        <button type="submit">Create user</button>
+      </form>
+
+      <script>
+        const form = document.getElementById('form');
+        
+        
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+        const firstName = document.querySelector('#firstName').value;
+        const lastName = document.querySelector('#lastName').value;
+        const email = document.querySelector('#email').value;
+        console.log("FN:" ,firstName)
+           console.log("LN:" ,lastName)
+           console.log("EMAIL:" ,email) 
+            //const formData = new FormData(this);
+            const formData = {
+              firstName,
+              lastName,
+              email
+            };
+            
+            sendFormToApi(formData);
+
+          //  for(const item of formData.values())
+          //   console.log(item);
+        //    formData.forEach((item, index)=> {
+        //     console.log(item, index);
+        //    } )
+            
+        console.log(form);
+        })
+
+        async function sendFormToApi(formData) {
+          const url = "https://6632937ac51e14d69564d9af.mockapi.io/test/v1";
+          const endpoint = "/form";
+
+          const response = await fetch(url+endpoint, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+          })
+          console.log(response);
+        }
+        
+      </script>
+</body>
+</html>

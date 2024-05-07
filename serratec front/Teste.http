@@ -1,0 +1,8 @@
+POST https://6632937ac51e14d69564d9af.mockapi.io/test/v1/form
+Content-Type: application/json
+
+{
+"firstName": "Luiz",
+"lastName": "miele",
+"email": "123@2123.com"
+}

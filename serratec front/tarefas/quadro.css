@@ -1,0 +1,27 @@
+h2 {
+    font-family: cursive;
+  }
+  
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  
+  li {
+    background-color: rgb(214, 214, 112);
+    width: 80px;
+    height: 80px;
+    margin: 6px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 3px 3px 6px;
+    text-align: center;
+  }
+  
+  .nova {
+    border: 1px solid salmon;
+    border-radius: 4px;
+    padding: 10px;
+  }
