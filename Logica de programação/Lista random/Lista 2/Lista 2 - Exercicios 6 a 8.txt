@@ -1,0 +1,16 @@
+Lista 2 - Exercicios 6 a 8
+
+6-
+
+7-
+a) real
+b) cadeia
+c) inteiro
+d) cadeia
+e) cadeia
+
+8- 
+a) real
+b) real
+c) inteiro
+d) cadeia
