@@ -1,11 +1,11 @@
-package controllers;
+package br.org.serratec.academiaPaixao.academiaPaixao.controllers;
 
-import entities.Instrutor;
+import br.org.serratec.academiaPaixao.academiaPaixao.entities.Instrutor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import services.InstrutorService;
+import br.org.serratec.academiaPaixao.academiaPaixao.services.InstrutorService;
 
 import java.util.List;
 

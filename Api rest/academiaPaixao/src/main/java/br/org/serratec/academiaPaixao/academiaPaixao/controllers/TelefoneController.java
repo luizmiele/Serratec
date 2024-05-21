@@ -1,12 +1,12 @@
-package controllers;
+package br.org.serratec.academiaPaixao.academiaPaixao.controllers;
 
-import entities.Telefone
+import br.org.serratec.academiaPaixao.academiaPaixao.entities.Telefone
 ;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import services.TelefoneService;
+import br.org.serratec.academiaPaixao.academiaPaixao.services.TelefoneService;
 
 import java.util.List;
 

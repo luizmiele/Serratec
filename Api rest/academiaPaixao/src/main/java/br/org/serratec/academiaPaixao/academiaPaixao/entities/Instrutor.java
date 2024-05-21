@@ -1,4 +1,4 @@
-package entities;
+package br.org.serratec.academiaPaixao.academiaPaixao.entities;
 
 import jakarta.persistence.*;
 
@@ -11,12 +11,16 @@ public class Instrutor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "instrutor_id")
     private Integer instrutorID;
+
     @Column(name = "rg")
     private String rg;
+
     @Column(name = "nome_instrutor")
     private String nomeInstrutor;
+
     @OneToOne(mappedBy = "instrutor")
     private Telefone telefone;
+
     @OneToMany(mappedBy = "instrutor")
     private List<Turma> turma;
 

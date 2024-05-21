@@ -1,9 +1,9 @@
-package services;
+package br.org.serratec.academiaPaixao.academiaPaixao.services;
 
-import entities.Turma;
+import br.org.serratec.academiaPaixao.academiaPaixao.entities.Turma;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repositories.TurmaRepository;
+import br.org.serratec.academiaPaixao.academiaPaixao.repositories.TurmaRepository;
 
 import java.util.List;
 

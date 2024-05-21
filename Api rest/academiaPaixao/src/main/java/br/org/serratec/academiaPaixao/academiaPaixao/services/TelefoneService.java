@@ -1,11 +1,11 @@
-package services;
+package br.org.serratec.academiaPaixao.academiaPaixao.services;
 
 import java.util.List;
 
-import entities.Telefone;
+import br.org.serratec.academiaPaixao.academiaPaixao.entities.Telefone;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repositories.TelefoneRepository;
+import br.org.serratec.academiaPaixao.academiaPaixao.repositories.TelefoneRepository;
 
 
 @Service

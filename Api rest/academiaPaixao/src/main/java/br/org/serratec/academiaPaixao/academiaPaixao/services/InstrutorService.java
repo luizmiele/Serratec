@@ -1,10 +1,10 @@
-package services;
+package br.org.serratec.academiaPaixao.academiaPaixao.services;
 
 
-import entities.Instrutor;
+import br.org.serratec.academiaPaixao.academiaPaixao.entities.Instrutor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repositories.InstrutorRepository;
+import br.org.serratec.academiaPaixao.academiaPaixao.repositories.InstrutorRepository;
 
 import java.util.List;
 

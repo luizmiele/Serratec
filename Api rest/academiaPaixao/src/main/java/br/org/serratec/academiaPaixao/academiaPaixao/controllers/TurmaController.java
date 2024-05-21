@@ -1,12 +1,12 @@
-package controllers;
+package br.org.serratec.academiaPaixao.academiaPaixao.controllers;
 
-import entities.Turma;
+import br.org.serratec.academiaPaixao.academiaPaixao.entities.Turma;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import services.TurmaService;
+import br.org.serratec.academiaPaixao.academiaPaixao.services.TurmaService;
 
 import java.util.List;
 

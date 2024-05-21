@@ -1,4 +1,4 @@
-package entities;
+package br.org.serratec.academiaPaixao.academiaPaixao.entities;
 
 import jakarta.persistence.*;
 
