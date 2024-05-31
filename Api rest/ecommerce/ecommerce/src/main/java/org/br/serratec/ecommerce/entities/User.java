@@ -1,21 +1,23 @@
-package br.org.serratec.academiaPaixao.academiaPaixao.entities;
-
+package org.br.serratec.ecommerce.entities;
 
 import jakarta.persistence.*;
+
+
 import java.util.List;
 
-
 @Entity
-@Table(name = "usuario", uniqueConstraints =  {@UniqueConstraint(columnNames = "email") })
+@Table(name = "usuario", uniqueConstraints= {@UniqueConstraint(columnNames = "login")})
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @Column(name = "user_id")
+    private Integer userId;
 
-    @Column(unique = true)
-    private String email;
+    @Column(name = "login", unique = true)
+    private String login;
 
+    @Column(name = "password")
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
@@ -27,32 +29,34 @@ public class User {
     public User() {
     }
 
-    public User( String password, List<Role> roles) {
-        this.email = email;
+    public User(String login, String password, List<Role> roles) {
+        this.login = login;
         this.password = password;
         this.roles = roles;
     }
-    public User( String email, String password, List<Role> roles) {
-        this.id = id;
-        this.email = email;
+    public User(Integer userId, String login, String password, List<Role> roles) {
+        this.userId = userId;
+        this.login = login;
         this.password = password;
         this.roles = roles;
     }
 
-    public Integer getId() {
-        return id;
+
+
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
-    public String getEmail() {
-        return email;
+    public String getLogin() {
+        return login;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public String getPassword() {

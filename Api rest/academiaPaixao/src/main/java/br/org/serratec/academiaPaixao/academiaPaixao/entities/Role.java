@@ -14,7 +14,9 @@ public class Role {
 
     public Role() {
     }
-
+    public Role(RoleEnum name) {
+        this.nome = name;
+	}
     public Role(Integer id, RoleEnum nome) {
         this.id = id;
         this.nome = nome;
