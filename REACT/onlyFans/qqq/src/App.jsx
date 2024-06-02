@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./App.module.css";
 import logoOF from "./imgs/logoOF.png";
 import jclogo from "./imgs/logocerto.png";
@@ -6,8 +6,33 @@ import bg from "./imgs/bgatt2.png";
 import jokers from "./imgs/jokers.png";
 import kuringas from "./imgs/JC.png";
 
+const users = [
+  { email: "usuario@email.com", password: "123" },
+  { email: "jokers@email.com", password: "hahaha" },
+];
 
 function App() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  function handleEmail(e){
+    setEmail(e.target.value);
+  };
+
+  function handleSenha(e){
+    setPassword(e.target.value);
+  };
+
+  function handleSubmit(){
+    const user = users.find((user) => user.email === email && user.password === password);
+    if (user) {
+      alert("BEM VINDO AO ONLYFANS!");
+    } else {
+      alert("EMAIL OU SENHA INVALIDOS!");
+    }
+  };
+
+
   return (
     <>
       <div className={styles.topConteiner}>
@@ -28,12 +53,14 @@ function App() {
               <input
                 type="email"
                 placeholder="E-mail"
-                className={styles.inputField} />
+                className={styles.inputField}
+                onChange={handleEmail} />
               <input
                 type="password"
                 placeholder="Senha"
-                className={styles.inputField} />
-              <button className={styles.loginButton}>LOGIN</button>
+                className={styles.inputField}
+                onChange={handleSenha} />
+              <button className={styles.loginButton} onClick={handleSubmit}>LOGIN</button>
               <div className={styles.footer}>
                 <a href="#">Esqueceu a senha?</a>
                 <a href="#">Inscreva-se no OnlyFans</a>
