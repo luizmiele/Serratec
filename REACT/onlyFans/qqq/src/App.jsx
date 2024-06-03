@@ -5,7 +5,9 @@ import jclogo from "./imgs/logocerto.png";
 import bg from "./imgs/bgatt2.png";
 import jokers from "./imgs/jokers.png";
 import kuringas from "./imgs/JC.png";
-
+import tt from "./imgs/tt.png"
+import google from "./imgs/google.png"
+import dedao from "./imgs/dedaobranco.png"
 
 
 function App() {
@@ -14,7 +16,8 @@ function App() {
   const [checaLogin, setChecaLogin] = useState(0);
   const [buttonColor, setButtonColor] = useState();
   const [isButtonDisabled, setIsButtonDisable] = useState(true);
-  const [changeCursor, setChangeCursor] = useState();  
+  const [changeCursor, setChangeCursor] = useState();
+  const [mensagemUsuario, setMensagemUsuario] = useState(false);
   
   const users = [
     { email: "usuario@email.com", password: "123" },
@@ -57,8 +60,9 @@ function App() {
         if (user) {
           console.log(user.email, "D5L1J51HJF9AIFKFLAL144141FALAL2 (SENHA CRIPTOGRAFADA)")
           alert("BEM VINDO AO ONLYFANS!");
+          setMensagemUsuario(false);
         } else {
-          alert("EMAIL OU SENHA INVALIDOS!");
+          setMensagemUsuario(true);
         }
     }
   }, [checaLogin]
@@ -93,19 +97,24 @@ function App() {
                 value={password}
                 className={styles.inputField}
                 onChange={handleSenha} />
+              {mensagemUsuario && <div className={styles.errorMessage}>Email ou senha incorretos.</div>}
               <button className={styles.loginButton}  style={estadoBotao} disabled={isButtonDisabled} onClick={handleSubmit}>LOGIN</button>
               <div className={styles.footer}>
                 <a href="#">Esqueceu a senha?</a>
+                <span> - </span>
                 <a href="#">Inscreva-se no OnlyFans</a>
               </div>
               <div className={styles.loginOptions}>
                 <button className={`${styles.loginOptionButton} ${styles.twitter}`}>
+                  <img className={styles.ttlogo} src={tt}/>
                   INICIAR SESSÃO COM O TWITTER
                 </button>
                 <button className={`${styles.loginOptionButton} ${styles.google}`}>
+                  <img className={styles.googlelogo} src={google}/>
                   INICIAR SESSÃO COM O GOOGLE
                 </button>
                 <button className={`${styles.loginOptionButton} ${styles.passwordless}`}>
+                  <img className={styles.passwordlesslogo} src={dedao}/>
                   LOGIN SEM SENHA
                 </button>
               </div>

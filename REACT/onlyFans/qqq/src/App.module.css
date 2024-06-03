@@ -75,6 +75,12 @@ body {
   border-radius: .375rem;
 }
 
+.errorMessage {
+  color: red;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+}
+
 .login-button {
   width: 100%;
   padding: .8125rem;
@@ -104,22 +110,54 @@ body {
 }
 
 .twitter {
+  display: flex;
   background-color: #1DA1F2;
   color: #FEFEFE;
   font-weight: bold;
+  padding: 10px;
+  position: relative;
 }
 
+.ttlogo {
+  width: 34px;
+  height: auto;
+  position: absolute;
+  left: 0.3rem;
+  
+}
 
 .google {
   background-color: #4285F4;
   color: #FEFEFE;
   font-weight: bold;
+  display: flex;
+  position: relative;
+  padding: 10px;
+}
+
+.googlelogo {
+  width: 26px;
+  height: auto;
+  position: absolute;
+  left: 0.3rem;
+  background-color: white;
+  border-radius: 17px 0px 0px 13px;
 }
 
 .passwordless {
-  background-color: #00AFF0;
+  background-color: #009BEC;
   color: #FEFEFE;
   font-weight: bold;
+  display: flex;
+  position: relative;
+  padding: 10px;
+}
+
+.passwordlesslogo {
+  width: 34px;
+  height: auto;
+  position: absolute;
+  left: 0.3rem;
 }
 
 .footer {
