@@ -78,7 +78,7 @@ body {
 .login-button {
   width: 100%;
   padding: .8125rem;
-  background-color: #DCE0E4;
+  /* background-color: #DCE0E4; */
   color: #FEFEFE;
   border: none;
   border-radius: 1.25rem;

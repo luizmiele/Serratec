@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./App.module.css";
 import logoOF from "./imgs/logoOF.png";
 import jclogo from "./imgs/logocerto.png";
@@ -6,14 +6,25 @@ import bg from "./imgs/bgatt2.png";
 import jokers from "./imgs/jokers.png";
 import kuringas from "./imgs/JC.png";
 
-const users = [
-  { email: "usuario@email.com", password: "123" },
-  { email: "jokers@email.com", password: "hahaha" },
-];
+
 
 function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [checaLogin, setChecaLogin] = useState(0);
+  const [buttonColor, setButtonColor] = useState();
+  const [isButtonDisabled, setIsButtonDisable] = useState(true);
+  const [changeCursor, setChangeCursor] = useState();  
+  
+  const users = [
+    { email: "usuario@email.com", password: "123" },
+    { email: "jokers@email.com", password: "hahaha" },
+  ];
+
+  const estadoBotao = {
+    backgroundColor: buttonColor,
+    cursor: changeCursor
+  }
 
   function handleEmail(e){
     setEmail(e.target.value);
@@ -22,16 +33,36 @@ function App() {
   function handleSenha(e){
     setPassword(e.target.value);
   };
-
+  
   function handleSubmit(){
-    const user = users.find((user) => user.email === email && user.password === password);
-    if (user) {
-      alert("BEM VINDO AO ONLYFANS!");
-    } else {
-      alert("EMAIL OU SENHA INVALIDOS!");
-    }
+   setChecaLogin(checaLogin+1);
   };
 
+  useEffect(() => {
+    if(email && password) {
+      setButtonColor('#00AFF0');
+      setIsButtonDisable(false);
+      setChangeCursor('pointer');
+    } else {
+      setButtonColor('#DCE0E4');
+      setIsButtonDisable(true);
+      setChangeCursor('default');
+    }
+  }, [email, password]
+);
+
+  useEffect(() => {
+    const user = users.find((user) => user.email === email && user.password === password);
+      if(checaLogin > 0) {
+        if (user) {
+          console.log(user.email, "D5L1J51HJF9AIFKFLAL144141FALAL2 (SENHA CRIPTOGRAFADA)")
+          alert("BEM VINDO AO ONLYFANS!");
+        } else {
+          alert("EMAIL OU SENHA INVALIDOS!");
+        }
+    }
+  }, [checaLogin]
+  );
 
   return (
     <>
@@ -53,14 +84,16 @@ function App() {
               <input
                 type="email"
                 placeholder="E-mail"
+                value={email}
                 className={styles.inputField}
                 onChange={handleEmail} />
               <input
                 type="password"
                 placeholder="Senha"
+                value={password}
                 className={styles.inputField}
                 onChange={handleSenha} />
-              <button className={styles.loginButton} onClick={handleSubmit}>LOGIN</button>
+              <button className={styles.loginButton}  style={estadoBotao} disabled={isButtonDisabled} onClick={handleSubmit}>LOGIN</button>
               <div className={styles.footer}>
                 <a href="#">Esqueceu a senha?</a>
                 <a href="#">Inscreva-se no OnlyFans</a>
