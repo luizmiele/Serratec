@@ -49,7 +49,7 @@ const Signin: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FDFFFD",
+    backgroundColor: "#FFFFFF",
     paddingLeft: 30,
     paddingRight: 30,
   },
